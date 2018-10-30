@@ -47,7 +47,7 @@ int main()
 	{
 		for(auto j : lv[i])
 		{
-			visit[j]=1;
+			visit[j]=1; //use to check cycle
 			make(j);
 			visit[j]=0;
 		}
