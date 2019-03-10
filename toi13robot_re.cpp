@@ -50,6 +50,7 @@ int main()
 			if(xx<1||xx>N||yy<1||yy>M) continue;
 			if(!visit[xx][yy] && p[xx][yy]!=-1)
 			{
+				if(p[xx][yy]==0) continue;
 				if(dist[xx][yy]==0) dist[xx][yy]=dist[x][y]+1;
 				else dist[xx][yy]=min(dist[xx][yy],dist[x][y]+1);
 				q.emplace(xx,yy);
