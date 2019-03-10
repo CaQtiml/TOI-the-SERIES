@@ -6,25 +6,25 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	vector<ll> V;
-	ll m,n;
-	cin >> m >> n ;
-	while(m--)
+	ll M,n,ans=0;
+	cin >> M >> n ;
+	while(M--)
 	{
 		ll t;
 		cin >> t ;
 		V.emplace_back(t);
 	}
 	ll st=1 , ed=2e12;
-	while(st<ed)
+	while(st<=ed)
 	{
-		ll m = (st+ed)/2;
+		ll mid = (st+ed)/2;
 		ll sum=0;
 		for(auto x : V)
 		{
-			sum+=(m/x);
+			sum+=(mid/x);
 		}
-		if(sum>=n) ed=m ;
-		else st=m+1;
+		if(sum>=n) {ans=mid; ed=mid-1;} 
+		else st=mid+1;
 	}
-	cout << ed ;
+	cout << ans ;
 }
