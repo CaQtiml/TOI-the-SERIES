@@ -25,17 +25,12 @@ int main()
 			cin >> pos;
 			//vector<int>::iterator lowerit , upperit;
 			int lower,upper,templower;
-			// auto lowerit = lower_bound(dp2.begin(),dp2.begin()+N,pos-L) ;
-			// auto upperit = upper_bound(dp2.begin(),dp2.begin()+N,pos+L) -1 ;
 			templower = lower_bound(dp.begin(),dp.begin()+N,pos-L) - dp.begin() ;
 			if(j==1) {lower=templower; chk=1;}
 			else if(templower>lower) {lower=templower; chk=1;}
 			upper = upper_bound(dp.begin(),dp.begin()+N,pos+L) -1 - dp.begin();
-			//cout << lower << " " << upper << "\n";
-			//cnt+=(upper-lower+1);
 			if(chk) cnt+=(upper-lower+1);
 			else cnt+=(upper-lower);
-			//if(upper-lower+1>0) cnt+=(upper-lower+1);
 			lower=upper;
 		}
 		//cout << "\n";
