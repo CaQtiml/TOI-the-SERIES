@@ -24,7 +24,7 @@ int main()
 			else if(h=='X')
 			{
 				q.emplace(i,j);
-				dist[i][j]=1;
+				//dist[i][j]=1;
 			}
 		}
 	}
@@ -41,7 +41,7 @@ int main()
 		if(p[x][y]==2)
 		{
 			bag+=1;
-			ans+=(dist[x][y]-1)*2;
+			ans+=(dist[x][y])*2;
 		}
 		for(int i=0;i<4;i++)
 		{
